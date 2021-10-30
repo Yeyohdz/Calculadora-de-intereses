@@ -1,0 +1,20 @@
+nombre= input("Introduce el nombre de la tarjeta: ")
+tasa= input("¿Que tasa de interés se tiene? ")
+deuda= input("¿Cual es el valor de la deuda? ")
+pago= input("¿Que pago se realizara? ")
+cargo= input("¿Cuánto es su cargo? ")
+intmen= (int(tasa)/100)/12
+deudar= ((int(deuda)-int(pago))*(1+float(intmen)))
+ndeuda= (int(deudar)+int(cargo))
+print("")
+if int(pago)>int(deuda):
+    print("Su pago no puede ser procesado, ya que es mayor a su deuda")
+    print("Inténtelo de nuevo")
+else:
+    print("El nombre de su tarjeta es: ", nombre)  
+    print("Su tasa de interés es de: ", tasa,"%")
+    print("Su tasa mensual es de: ", intmen,"%")
+    print("Su deuda era de: $", deuda)
+    print ("Su nueva deuda es de: $",ndeuda)
+    print("Su pago es de: $", pago)
+    print("Su cargo es de: $", cargo)
